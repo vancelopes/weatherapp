@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:weatherapp/core/di.dart';
 import 'package:weatherapp/view/home_page.dart';
 
 void main() {
+  DependencyInjector.init();
+
   runApp(const WeatherApp());
 }
 
@@ -19,7 +22,7 @@ class WeatherApp extends StatelessWidget {
           bodyMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
         ),
       ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
